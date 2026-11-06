@@ -9,6 +9,7 @@ public class Mucha extends Hmyz{
         super(root);
         setOnMouseClicked(e->zanikne());
 
+
     }
     public void stop() { t.stop();}
 
@@ -24,6 +25,6 @@ public class Mucha extends Hmyz{
 
     protected void vykresli(){
         gc.setFill(Color.BLACK);
-        gc.fillOval(getLayoutX(), getLayoutY(), 10, 10);
+        gc.fillOval(0,0, 10, 10);
     }
 }

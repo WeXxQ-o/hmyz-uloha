@@ -10,6 +10,7 @@ public class Chrobak extends Hmyz{
         super(root);
         setLayoutY(root.getHeight()-15);
 
+
     }
 
     protected void pohyb(){

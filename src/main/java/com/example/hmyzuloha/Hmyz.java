@@ -16,7 +16,7 @@ public abstract class Hmyz extends Canvas {
 
 
     public Hmyz(Pane root) {
-        super();
+        super(20,20);
         this.root = root;
         setLayoutX(Math.random()*root.getWidth());
         setLayoutY(Math.random()*root.getHeight());

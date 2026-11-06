@@ -3,9 +3,8 @@ package com.example.hmyzuloha;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
-
-import java.awt.event.KeyEvent;
 
 public class HelloController {
     @FXML
@@ -15,7 +14,9 @@ public class HelloController {
     
     @FXML
     private void initialize() {
-        root.setOnKeyPressed(spracuj(););
+        root.setFocusTraversable(true);
+        root.setOnKeyPressed(this::spracuj);
+        root.requestFocus();
 
         
     }
@@ -36,7 +37,7 @@ public class HelloController {
         for(int i=0;i<root.getChildren().size();i++){
             Node n = root.getChildren().get(i);
             if (n instanceof Hmyz) {
-                ((Hmyz) n).pohyb();
+                n.setLayoutY(n.getLayoutY() - 50);
             }
         }
     }
